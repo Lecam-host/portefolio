@@ -4,15 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:mon_cv/firebase_options.dart';
 import 'package:mon_cv/model/model.dart' show ExperienceItem;
 import 'package:provider/provider.dart';
-import 'package:flutter/material.dart';
 import 'package:mon_cv/providers/providers.dart';
-import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 import 'screens/skills_screens.dart';
 
 class ThemeModel extends ChangeNotifier {
-  bool _isDarkMode = false;
+  bool _isDarkMode = true;
 
   bool get isDarkMode => _isDarkMode;
 
@@ -87,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Prénom Nom'),
+        title: const Text('Lecam Papa'),
         actions: [
           IconButton(
             icon: Icon(
@@ -142,13 +140,13 @@ class ProfileHeader extends StatelessWidget {
             ),
             child: const CircleAvatar(
               radius: 75,
-              backgroundImage: AssetImage('assets/profile_image.jpg'),
+              backgroundImage: AssetImage('assets/images/photo.jpeg'),
             ),
           ),
           const SizedBox(height: 24),
           // Nom et titre
           const Text(
-            'Prénom Nom',
+            'Lecam Papa',
             style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 8),
