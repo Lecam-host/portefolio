@@ -63,6 +63,12 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/photo.jpeg
+
+  fonts:
+    - family: Mulish
+      fonts:
+        - asset: assets/fonts/mulish/Mulish-Light.ttf
+        - asset: assets/fonts/mulish/Mulish-SemiBold.ttf
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
