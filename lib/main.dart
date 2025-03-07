@@ -6,7 +6,7 @@ import 'package:mon_cv/screens/experiences_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:mon_cv/providers/providers.dart';
 import 'package:firebase_core/firebase_core.dart';
-
+import "package:particles_fly/particles_fly.dart";
 import 'core/app_theme.dart';
 import 'screens/contact_screen.dart';
 import 'screens/project_screen.dart';

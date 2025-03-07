@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:particles_fly/particles_fly.dart' show ParticlesFly;
 
 class ProfileHeader extends StatelessWidget {
   const ProfileHeader({super.key});
@@ -10,24 +11,37 @@ class ProfileHeader extends StatelessWidget {
       child: Column(
         children: [
           // Avatar avec effet d'ombre
-          Container(
-            height: 150,
-            width: 150,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.blue.withOpacity(0.5),
-                  spreadRadius: 5,
-                  blurRadius: 7,
-                  offset: const Offset(0, 3),
+          Stack(
+            alignment: Alignment.center,
+            children: [
+              ParticlesFly(
+                particleColor: Theme.of(context).primaryColor.withAlpha(100),
+                height: 200,
+                width: 200,
+                lineColor: Theme.of(context).primaryColor.withAlpha(100),
+                connectDots: true,
+                numberOfParticles: 100,
+              ),
+              Container(
+                height: 150,
+                width: 150,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.blue.withOpacity(0.5),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: const Offset(0, 3),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            child: const CircleAvatar(
-              radius: 75,
-              backgroundImage: AssetImage('assets/images/photo.jpeg'),
-            ),
+                child: const CircleAvatar(
+                  radius: 75,
+                  backgroundImage: AssetImage('assets/images/photo.jpeg'),
+                ),
+              ),
+            ],
           ),
           const SizedBox(height: 24),
           // Nom et titre
