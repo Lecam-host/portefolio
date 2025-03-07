@@ -206,18 +206,14 @@ class MainNavigation extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              icon,
-              size: 40,
-              color: Theme.of(context).colorScheme.onPrimaryContainer,
-            ),
+            Icon(icon, size: 40, color: Theme.of(context).colorScheme.primary),
             const SizedBox(height: 8),
             Text(
               title,
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.onPrimaryContainer,
+                color: Theme.of(context).colorScheme.primary,
               ),
             ),
           ],

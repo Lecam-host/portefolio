@@ -1,6 +1,7 @@
 // education_screen.dart
 import 'package:flutter/material.dart';
 import 'package:mon_cv/model/model.dart' show EducationItem;
+import 'package:mon_cv/screens/widget/theme_icon_widget.dart';
 import 'package:provider/provider.dart';
 
 import '../services/services.dart';
@@ -23,7 +24,10 @@ class _EducationScreenState extends State<EducationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Formation')),
+      appBar: AppBar(
+        title: const Text('Formation'),
+        actions: [ThemeIconWidget()],
+      ),
       body: Consumer<EducationProvider>(
         builder: (context, educationProvider, child) {
           if (educationProvider.isLoading) {

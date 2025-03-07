@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mon_cv/screens/widget/theme_icon_widget.dart';
 
 class ContactScreen extends StatefulWidget {
   const ContactScreen({super.key});
@@ -32,7 +33,10 @@ class _ContactScreenState extends State<ContactScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Contact')),
+      appBar: AppBar(
+        title: const Text('Contact'),
+        actions: [ThemeIconWidget()],
+      ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(24),
         child: Form(
@@ -125,6 +129,11 @@ class _ContactScreenState extends State<ContactScreen> {
                   }
                 },
                 style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  backgroundColor: Theme.of(context).primaryColor,
+                  foregroundColor: Theme.of(context).colorScheme.onPrimary,
                   minimumSize: const Size(double.infinity, 50),
                 ),
               ),
@@ -149,16 +158,16 @@ class _ContactScreenState extends State<ContactScreen> {
                     context,
                     'GitHub',
                     Icons.code,
-                    Colors.black,
+                    Colors.blue.shade800,
                     () {},
                   ),
-                  _socialButton(
-                    context,
-                    'Twitter',
-                    Icons.chat,
-                    Colors.blue.shade400,
-                    () {},
-                  ),
+                  // _socialButton(
+                  //   context,
+                  //   'Twitter',
+                  //   Icons.chat,
+                  //   Colors.blue.shade400,
+                  //   () {},
+                  // ),
                 ],
               ),
             ],

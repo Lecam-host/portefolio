@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mon_cv/providers/providers.dart';
+import 'package:mon_cv/screens/widget/theme_icon_widget.dart';
 import 'package:provider/provider.dart';
 
 import 'widget/experience_card.dart';
@@ -27,7 +28,10 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Expérience Professionnelle')),
+      appBar: AppBar(
+        title: const Text('Expérience Professionnelle'),
+        actions: [ThemeIconWidget()],
+      ),
       body: Consumer<ExperiencesProvider>(
         builder: (context, experiencesProvider, child) {
           if (experiencesProvider.isLoading) {

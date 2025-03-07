@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mon_cv/screens/widget/theme_icon_widget.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/providers.dart';
@@ -24,7 +25,10 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Projets')),
+      appBar: AppBar(
+        title: const Text('Projets'),
+        actions: [ThemeIconWidget()],
+      ),
       body: Consumer<ProjectsProvider>(
         builder: (context, projectsProvider, child) {
           if (projectsProvider.isLoading) {

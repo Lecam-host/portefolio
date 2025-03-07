@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:mon_cv/model/model.dart';
 import 'package:mon_cv/providers/providers.dart';
+import 'package:mon_cv/screens/widget/theme_icon_widget.dart';
 import 'package:provider/provider.dart';
 
 class SkillsScreen extends StatefulWidget {
@@ -38,7 +39,10 @@ class _SkillsScreenState extends State<SkillsScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Compétences')),
+      appBar: AppBar(
+        title: const Text('Compétences'),
+        actions: [ThemeIconWidget()],
+      ),
       body: Consumer<SkillsProvider>(
         builder: (context, skillsProvider, child) {
           if (skillsProvider.isLoading) {
