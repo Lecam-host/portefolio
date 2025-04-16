@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -51,7 +48,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAAFvzXniwijMEWiS0i9pPAS1pF6BT9d2k',
-    appId: '1:969238736082:android:ebc1b81f051b41759ed10b',
+    appId: '1:969238736082:android:2900c2e926639ab29ed10b',
     messagingSenderId: '969238736082',
     projectId: 'mon-cv-f4a25',
     storageBucket: 'mon-cv-f4a25.firebasestorage.app',
@@ -59,10 +56,21 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyB3TOR47xKWfeFBZGo1XKaFOwJr368XN4E',
-    appId: '1:969238736082:ios:fca5e84b209d5a739ed10b',
+    appId: '1:969238736082:ios:dac3f5279b21fa449ed10b',
     messagingSenderId: '969238736082',
     projectId: 'mon-cv-f4a25',
     storageBucket: 'mon-cv-f4a25.firebasestorage.app',
     iosBundleId: 'com.example.monCv',
   );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyCSPiX1OjBijS3FobPgog7kS3G2-jaGm6I',
+    appId: '1:969238736082:web:c4ad72301ff7d44b9ed10b',
+    messagingSenderId: '969238736082',
+    projectId: 'mon-cv-f4a25',
+    authDomain: 'mon-cv-f4a25.firebaseapp.com',
+    storageBucket: 'mon-cv-f4a25.firebasestorage.app',
+    measurementId: 'G-4P1DXDYSC5',
+  );
+
 }
